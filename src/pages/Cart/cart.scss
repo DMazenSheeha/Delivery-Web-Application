@@ -1,0 +1,105 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+  .cart-title {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 1fr;
+    margin: 10px 0;
+    color: gray;
+    font-size: max(1vw, 12px);
+    &.cart-item {
+      color: black;
+      margin: 10px 0;
+      align-items: center;
+      img {
+        margin-right: 10px;
+        width: 50px;
+      }
+      p {
+        margin-right: 10px;
+      }
+      p:last-child {
+        font-size: 25px;
+        cursor: pointer;
+      }
+      hr {
+        height: 1px;
+        background-color: #e2e2e2;
+      }
+    }
+  }
+  .cart-bottom {
+    margin: 80px 0 50px;
+    display: flex;
+    gap: max(12vw, 20px);
+    .cart-total {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      p:first-child {
+        color: gray;
+      }
+      h2 {
+        margin-bottom: 10px;
+      }
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+        p.total {
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: #000;
+        }
+      }
+      hr {
+        height: 1px;
+        background-color: #e2e2e2;
+        border: none;
+      }
+      button {
+        margin-top: 10px;
+        background-color: tomato;
+        color: #fff;
+        border-radius: 4px;
+        width: max(15vw, 200px);
+        padding: 12px 0;
+        cursor: pointer;
+      }
+    }
+    .promo-code {
+      flex: 1;
+      color: #555;
+      .promo-code-input {
+        margin-top: 10px;
+        border-radius: 4px;
+        display: flex;
+        background-color: #eaeaea;
+        justify-content: space-between;
+        input {
+          background-color: transparent;
+          width: calc(100% - 150px);
+          border: none;
+          outline: none;
+          padding-left: 20px;
+        }
+        button {
+          width: max(10vw, 150px);
+          padding: 12px 5px;
+          background-color: #000;
+          color: #fff;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .cart-bottom {
+    flex-direction: column;
+  }
+}

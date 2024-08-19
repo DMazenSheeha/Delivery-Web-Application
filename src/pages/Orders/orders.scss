@@ -1,0 +1,60 @@
+.orders-page {
+  min-height: 50vh;
+  & > p {
+    color: #6d6d6d;
+    font-size: 1.2rem !important;
+    font-weight: 500;
+  }
+  .order {
+    color: #505050;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+    border: 1px solid tomato;
+    padding: 20px !important;
+    margin: 30px 0;
+    font-size: 14px;
+    .status {
+      position: relative;
+      display: flex;
+      align-items: center;
+      &::before {
+        content: "";
+        position: absolute;
+        left: -12px;
+        background-color: tomato;
+        min-height: 6px;
+        min-width: 6px;
+        border-radius: 50px;
+      }
+    }
+    .track {
+      background-color: #f9d3cb;
+      width: fit-content;
+      padding: 10px 20px;
+      border-color: tomato;
+      border-radius: 4px;
+      color: #000;
+      text-align: center;
+      text-wrap: nowrap;
+    }
+    @media (max-width: 1000px) {
+      font-size: 12px;
+      grid-template-columns: 0.5fr 2fr 1fr;
+      padding: 15px 8px;
+      .info {
+        grid-column: 2;
+      }
+      img {
+        width: 40px;
+      }
+      .track {
+        padding: 10px;
+      }
+    }
+    @media (max-width: 400px) {
+      grid-template-columns: 0.5fr 1fr;
+    }
+  }
+}
