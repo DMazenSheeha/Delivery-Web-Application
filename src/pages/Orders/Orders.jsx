@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { assets } from "../../../../admin/src/assests/assets";
+import { assets } from "../../assests/frontend_assets/assets";
 import "./orders.scss";
 import axios from "axios";
 import { StoreContext } from "../../context/StoreContext";
