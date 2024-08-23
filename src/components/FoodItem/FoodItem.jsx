@@ -25,7 +25,7 @@ function FoodItem({ id, image, name, description, price }) {
               src={assets.remove_icon_red}
               alt=""
               onClick={() => {
-                removeFromCart(id);
+                if(Number(cartItems[id]) > 0) removeFromCart(id);
               }}
             />
             <p>{cartItems[id]}</p>
