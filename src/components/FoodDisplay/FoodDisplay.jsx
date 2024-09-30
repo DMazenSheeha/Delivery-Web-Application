@@ -27,7 +27,9 @@ function FoodDisplay({ category }) {
             }
           })
         ) : (
+        <div className="container" style={{ display: "flex" }}>
           <span className="loader"></span>
+        </div>
         )}
       </div>
     </div>
